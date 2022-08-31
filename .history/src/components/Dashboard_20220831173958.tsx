@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import { FiCamera } from 'react-icons/fi'
 
 const Component = styled.div`
 
@@ -12,32 +13,28 @@ export default function Dashboard(props: IAppProps) {
     <Component>
       <div>
         <a href='#'>Admin test</a>
-        <picture>
-          <img src='#' alt='profile-image' />
-        </picture>
+        <img src='#' alt='profile-image' />
       </div>
-
       <form>
         <h3>Publish</h3>
         <p>Create recipes and share them in your social</p>
 
         <label htmlFor='recipe-name'>Recipe name</label>
         <input id='recipe-name' type='text' />
-
-        <section className='images'>
+        <section>
           <p>Images</p>
-
           <picture id='thumbnail-img'>
-            {/* the default camera picture is <FiCamera /> */}
-            <img src='#' alt='thumbnail' />
+            <img src='#' alt='' />
+            <FiCamera />
             <label htmlFor='thumbnail-img'>Thumbnail image</label>
           </picture>
           <picture id='main-img'>
-            {/* the default camera picture is <FiCamera /> */}
-            <img src='#' alt='main' />
+            <img src='#' alt='' />
+            <FiCamera />
             <label htmlFor='main-img'>Main image</label>
           </picture>
 
+          <img src='' alt='' />
           <hr />
           <button className='cancel-btn'>Cancel</button>
           <button className='Next-btn'>Next</button>

@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
 import { Coolfood } from './components/Coolfood'
+import Publish from './components/Dashboard'
 import SideBar from './components/Sidebar'
 import styled from 'styled-components'
 import Dashboard from './components/Dashboard'
@@ -14,7 +15,7 @@ const Component = styled.div`
     background: var(--secondary);
   }
 `
-
+const navPages = [{}]
 const App = () => {
   return (
     <Component>

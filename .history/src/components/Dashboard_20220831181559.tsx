@@ -29,12 +29,12 @@ export default function Dashboard(props: IAppProps) {
 
           <picture id='thumbnail-img'>
             {/* the default camera picture is <FiCamera /> */}
-            <img src='#' alt='thumbnail' />
+
             <label htmlFor='thumbnail-img'>Thumbnail image</label>
           </picture>
           <picture id='main-img'>
             {/* the default camera picture is <FiCamera /> */}
-            <img src='#' alt='main' />
+
             <label htmlFor='main-img'>Main image</label>
           </picture>
 
