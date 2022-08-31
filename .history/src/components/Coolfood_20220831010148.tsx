@@ -15,7 +15,7 @@ export const Coolfood = (props: Props) => {
         </section>
 
         <h4>Cool foods</h4>
-        <section className='foodlist'>
+        <section>
           {foods.map((food) => {
             const { id, img, name } = food
             return (
