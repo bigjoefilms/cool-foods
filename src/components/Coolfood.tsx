@@ -1,4 +1,5 @@
 import * as React from 'react'
+import "./coolfood.css"
 import { foods } from './data'
 
 interface Props {}
@@ -6,6 +7,7 @@ interface Props {}
 export const Coolfood = (props: Props) => {
   return (
     <>
+   
       <main>
         <section className='profile-image'>
           <img
@@ -14,14 +16,16 @@ export const Coolfood = (props: Props) => {
           />
         </section>
 
-        <h4>Cool foods</h4>
+        <h4 className="header-text">Cool foods</h4>
         <section className='foodlist'>
           {foods.map((food) => {
             const { id, img, name } = food
             return (
-              <div key={id}>
-                <img src={img} alt={name} />
-                <p>{name}</p>
+                <div className="list">
+              <div className="list-itm" key={id}>
+                <img className='profile-img' src={img} alt={name} />
+                <p >{name}</p>
+              </div>
               </div>
             )
           })}
