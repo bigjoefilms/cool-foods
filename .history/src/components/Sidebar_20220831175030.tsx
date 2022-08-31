@@ -7,5 +7,9 @@ const Component = styled.div`
 }
 `
 export default function SideBar() {
-  return <Component></Component>
+  return (
+    <Component>
+      <div className='top'></div>
+    </Component>
+  )
 }

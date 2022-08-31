@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import { Img } from '../../src/assets/icons/index'
 
 const Component = styled.div`
 
@@ -29,12 +30,13 @@ export default function Dashboard(props: IAppProps) {
 
           <picture id='thumbnail-img'>
             {/* the default camera picture is <FiCamera /> */}
-            <img src='#' alt='thumbnail' />
+            <Img />
             <label htmlFor='thumbnail-img'>Thumbnail image</label>
           </picture>
           <picture id='main-img'>
             {/* the default camera picture is <FiCamera /> */}
-            <img src='#' alt='main' />
+            <img src='#' alt='' />
+
             <label htmlFor='main-img'>Main image</label>
           </picture>
 
