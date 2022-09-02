@@ -6,9 +6,8 @@ import styled from 'styled-components'
 import Dashboard from './components/Dashboard'
 
 const Component = styled.div`
-   
-    display: grid;
-    grid-template-columns: 250px 1fr;
+ display: grid;
+    grid-template-columns: 278px 1fr;
     height: 100vh;
     background: var(--secondary);
 
@@ -24,7 +23,7 @@ const App = () => {
   return (
     <Component>
       {/* <Coolfood /> */}
-      <SideBar />
+    <SideBar/>
       <Dashboard />
     </Component>
   )

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Menu } from '../../src/assets/icons/index'
+import Navbar from './Navbar'
 
 const Component = styled.div`
 display:grid;
@@ -15,7 +16,7 @@ padding: 0px 0px;
 .side-bar{
     background:#F6F7F9;;
     width: 253px;
-    height: 1024px;
+    height: auto;
    
 }
 .side-bar-text{
@@ -23,7 +24,7 @@ padding: 0px 0px;
     font-size: 20px;
    padding-top: 54px;
    padding-left: 39px;
-   margin-bottom: 53px;
+   margin-bottom: 62px;
 }
 .list-itms{
     display: flex;
@@ -47,6 +48,7 @@ export default function SideBar() {
 
     return (
         <Component>
+             
             <div className="side-bar">
                 <h1 className='side-bar-text'>SnackFresh</h1>
                 <div className='list-itms'>
