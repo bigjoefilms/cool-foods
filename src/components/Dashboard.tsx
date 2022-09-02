@@ -127,10 +127,12 @@ color: #5F606C;
 
 .images{
   margin-top: 28px;
+  
 }
 .pic-upload{
   margin-top: 39px;
   display: flex;
+  margin-bottom: 309px;
 }
 .pic-upload picture{
   background: #FFFFFF;
@@ -151,7 +153,7 @@ picture label{
   margin-top:32px ;
 }
 .btm-sec{
-  margin-top: 309px;
+
 
 }
 .btm-sec-ing{
@@ -200,21 +202,25 @@ hr {
   justify-content: start;
   text-decoration: none;
   list-style: none;
+  padding: 0;
+  
 
 }
 .stps-list{
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0;
   
 }
 .close-btn{
   margin-right: 14px;
  
 }
+
 .steps-fill {
-  display: flex;
-  flex-direction: column;
+ margin-bottom: 209px;
+ position: relative;
 }
 .steps-fill input{
   width: 618px;
@@ -222,10 +228,13 @@ hr {
   border: 1px solid #E1E6EE;
   border-radius: 10px; 
   margin-top: 10px;
+  position: absolute;
   margin-bottom: 70px;
   position: relative;
+ 
 
 }
+
 .steps-fill input::placeholder{
   padding-left: 20px;
   margin-top: 13px;
@@ -233,16 +242,25 @@ hr {
   font-weight: 400;
   font-size: 17px;
 }
+.steps-input{
+  display: flex;
+  flex-direction: column;
+  
+
+}
 .add-stp{
   margin-bottom: 150px ;
   background: #796BCC;
   border: 1px solid #E1E6EE;
   border-radius: 10px;
-  padding: 13px 49px;
+  padding: 13px;
+  max-width: 131px;
+  max-height: 44px;
   color: #FFFFFF;
   margin-top: 17px;
 
 }
+
 
 ` 
 
@@ -253,7 +271,7 @@ export interface IAppProps {
 }
 const Home = () =>( 
   <>
-  <Navbar/>
+ 
   </>
 )
 

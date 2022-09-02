@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
-
+import { Dpic } from '../assets/icons/index'
 
 
 const Component = styled.div`
@@ -16,7 +16,7 @@ export default function Navbar (props: IAppProps) {
       <div className='nav-bar'>
         <a href='#' className='adm-text'>Admin test</a>
         <picture className='profile-pic'>
-          <img src='#' alt='profile-pic' />
+          <Dpic/>
         </picture>
       </div>
 
