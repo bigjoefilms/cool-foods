@@ -1,9 +1,18 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { Icon } from '../../src/assets/icons/index'
+import Navbar from './Navbar'
+import Publish from './Publish'
+import {useState} from 'react';
+import {BrowserRouter as Router ,Routes , Route, } from'react-router-dom';
+import Ingredients from './Ingredients'
+import Steps from './Steps'
+
 
 
 const Component = styled.div`
+  
+  
 *{
   font-family: 'Inter', sans-serif;
  
@@ -40,7 +49,7 @@ body{
 
 }
 .dash-ctn{
-  margin-top: 99px;
+  margin-top: 95px;
   
 }
 .dash-txt{
@@ -48,6 +57,16 @@ body{
   font-size: 25px;
   margin-bottom: 0;
   
+}
+.dash-hd{
+  font-weight: 500;
+font-size: 15px;
+
+}
+.dash-qes{
+  font-weight: 400;
+font-size: 13px;
+color: #5F606C;
 }
 .dash-des{
   font-weight: 300;
@@ -57,6 +76,12 @@ body{
   margin-bottom: 39px;
 }
 .recipe-dash{
+  display: flex;
+  flex-direction: column;
+  margin-top: 108px;
+ 
+}
+.recipe-cnt{
   display: flex;
   flex-direction: column;
 }
@@ -72,6 +97,34 @@ body{
   border-radius: 10px; 
   margin-top: 10px;
 }
+.recipe-name{
+  width: 618px;
+  height: 47px;
+  display: flex;
+  flex-direction: row;
+}
+.recipe-int{
+  display: flex;
+  flex-direction: row;
+}
+.recipe-ctn-1{
+  width: 400px;
+  height: 47px;
+  border: 1px solid #E1E6EE;
+  border-radius: 10px; 
+  margin-top: 10px;
+  margin-right: 36px;
+
+}
+.recipe-ctn-2{
+  width: 140px;
+  height: 47px;
+  border: 1px solid #E1E6EE;
+  border-radius: 10px; 
+  margin-top: 10px;
+
+}
+
 .images{
   margin-top: 28px;
 }
@@ -91,11 +144,18 @@ body{
   justify-content: center;
   flex-direction: column;
 }
+.pic-upload-thumb{
+  margin-left: 220px;
+}
 picture label{
   margin-top:32px ;
 }
 .btm-sec{
   margin-top: 309px;
+
+}
+.btm-sec-ing{
+  margin-top: 50px;
 
 }
 hr {
@@ -115,7 +175,7 @@ hr {
   background: #FFFFFF;
   border: 1px solid #E1E6EE;
   border-radius: 10px;
-  padding: 13px 40px;
+  padding: 13px 43px;
 
 }
 .Next-btn{
@@ -123,58 +183,100 @@ hr {
   border: 1px solid #E1E6EE;
   border-radius: 10px;
   padding: 13px 40px;
+  color: #FFFFFF;
+}
+.add-btn{
+  background: #796BCC;
+  border: 1px solid #E1E6EE;
+  border-radius: 10px;
+  padding: 13px 49px;
+  color: #FFFFFF;
+  margin-top: 17px;
+
+}
+.stps{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  text-decoration: none;
+  list-style: none;
+
+}
+.stps-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.close-btn{
+  margin-right: 14px;
+ 
+}
+.steps-fill {
+  display: flex;
+  flex-direction: column;
+}
+.steps-fill input{
+  width: 618px;
+  height: 116px;
+  border: 1px solid #E1E6EE;
+  border-radius: 10px; 
+  margin-top: 10px;
+  margin-bottom: 70px;
+  position: relative;
+
+}
+.steps-fill input::placeholder{
+  padding-left: 20px;
+  margin-top: 13px;
+  position: absolute;
+  font-weight: 400;
+  font-size: 17px;
+}
+.add-stp{
+  margin-bottom: 150px ;
+  background: #796BCC;
+  border: 1px solid #E1E6EE;
+  border-radius: 10px;
+  padding: 13px 49px;
+  color: #FFFFFF;
+  margin-top: 17px;
+
 }
 
 ` 
 
+
 export interface IAppProps {
+  
  
 }
+const Home = () =>( 
+  <>
+  <Navbar/>
+  </>
+)
 
-export default function Dashboard(props: IAppProps) {
+export default function Dashboard (props: IAppProps ) { 
+  
+  
   return (
+    
     <Component>
-      <div className='nav-bar'>
-        <a href='#' className='adm-text'>Admin test</a>
-        <picture className='profile-pic'>
-          <img src='#' alt='profile-pic' />
-        </picture>
-      </div>
+       <Router>
+          
+          
+          <Routes>
+          <Route path='/' element={<Home/>}/>
+        <Route path='/publish' element={<Publish/>}/>
+        <Route path='/ingredient' element={<Ingredients />}/>
+        <Route path='/steps' element={<Steps/>}/>
 
-      <section className='dash-ctn'>
-        <h3 className='dash-txt'>Publish</h3>
-        <p className='dash-des'>Create recipes and share them in your social</p>
-        <div className='recipe-dash'>
-        <label htmlFor='recipe-name'>Recipe name</label>
-        <input id='recipe-name' type='text' />
-
-        </div>
-       
-
-        <div className='images'>
-          <p>Images</p>
-         <div className='pic-upload'>
-          <picture id='thumbnail-img'>
-            {/* the default camera picture is <FiCamera /> */}
-            <Icon />
-            <label htmlFor='thumbnail-img'>Thumbnail image</label>
-          </picture>
-          <picture id='main-img'>
-            {/* the default camera picture is <FiCamera /> */}
-            <Icon />
-            <label htmlFor='main-img'>Main image</label>
-          </picture>
-          </div>
-
-        <div className='btm-sec'>
-          <hr/>
-              <div className='btn-btm'>
-              <button className='cancel-btn'>Cancel</button>
-              <button className='Next-btn'>Next</button>
-          </div>
-          </div>
-        </div>
-      </section>
+    </Routes>
+    </Router>
+    
     </Component>
+   
+    
   )
 }
