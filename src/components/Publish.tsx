@@ -2,6 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 import { Icon } from '../assets/icons/index'
 import{Link}from'react-router-dom'
+import Navbar from './Navbar'
 
 
 const Component = styled.div`
@@ -23,7 +24,7 @@ export default function Publish  (props: IAppProps ){
 
   return (
     <Component>
-     
+     <Navbar/>
       <section className='dash-ctn'>
         <h3 className='dash-txt'>Publish</h3>
         <p className='dash-des'>Create recipes and share them in your social</p>

@@ -10,6 +10,7 @@ const Component = styled.div`
     grid-template-columns: 278px 1fr;
     height: 100vh;
     background: var(--secondary);
+    width: auto;
 
     body{
       margin: 0;

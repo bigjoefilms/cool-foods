@@ -5,6 +5,7 @@ import{Link}from'react-router-dom'
 import Navbar from './Navbar'
 
 const Component = styled.div`
+
 `
 
 const Steps = () => {
@@ -36,6 +37,7 @@ const Steps = () => {
         <form className='steps-fill'>
           <h3 className='dash-txt'>Steps</h3>
           <p className='dash-des'>Add steps</p>
+          < div className="steps-input">
           <input
             type='text'
             placeholder=' Type in a step'
@@ -43,7 +45,8 @@ const Steps = () => {
             onChange={(e) => setSteps(e.target.value)}
           />
           <button className='add-stp' onClick={handleSubmit}>Add a step</button>
-        </form>
+          </div>
+       
 
         {stepList.map(
           (step) =>
@@ -61,6 +64,7 @@ const Steps = () => {
               </div>
             )
         )}
+         </form>
         <div className='btm-sec'>
           <hr/>
               <div className='btn-btm'>
