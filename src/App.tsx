@@ -1,9 +1,9 @@
 import React from 'react'
 import './App.css'
-import { Coolfood } from './components/Coolfood'
-import SideBar from './components/Sidebar'
+import { Coolfood } from './components/Coolfoods/Coolfood'
+import SideBar from './components/Sharedcomponents/Sidebar'
 import styled from 'styled-components'
-import Dashboard from './components/Dashboard'
+import Dashboard from './components/Layercomponents/Dashboard'
 
 const Component = styled.div`
  display: grid;
@@ -11,11 +11,19 @@ const Component = styled.div`
     height: 100vh;
     background: var(--secondary);
     width: auto;
+    
 
     body{
       margin: 0;
+      width: auto;
      
     }
+    @media all and (max-width:1000px){
+      display: grid;
+      grid-template-columns: 0px 1fr;
+
+    }
+   
   
   
 `

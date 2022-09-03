@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Menu } from '../../src/assets/icons/index'
+import { Menu } from '../../assets/icons/index'
 import Navbar from './Navbar'
 
 const Component = styled.div`
@@ -41,6 +41,12 @@ padding: 0px 0px;
 }
 .list-itm p{
     margin-left:14px ;
+}
+@media all and (max-width:1000px){ 
+      
+    .side-bar{
+      display: none;
+    }
 }
 
 `
