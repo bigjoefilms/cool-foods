@@ -1,6 +1,6 @@
 import * as React from 'react'
 import "./coolfood.css"
-import { foods } from './data'
+import { foods } from '../Coolfoods/data'
 
 
 interface Props {}
