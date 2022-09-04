@@ -52,6 +52,7 @@ color: #5F606C;
   border-radius: 10px; 
   margin-top: 10px;
   margin-right: 36px;
+  padding-left: 20px;
 
 
 }
@@ -61,10 +62,11 @@ color: #5F606C;
   border: 1px solid #E1E6EE;
   border-radius: 10px; 
   margin-top: 10px;
+  padding-left: 20px;
 
 }
 .recipe-name{
-  width: 618px;
+  width: auto;
   height: 47px;
   display: flex;
   flex-direction: row;
@@ -122,6 +124,11 @@ color: #5F606C;
 .pic-upload picture{
   margin-bottom: 100px;
 
+}
+.recipe-ctn-1{
+  width: auto;
+  height: 47px;
+  min-width: 0;
 }
 }
 ` 
