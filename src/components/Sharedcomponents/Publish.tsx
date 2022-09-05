@@ -1,6 +1,5 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { Icon } from '../../assets/icons/index'
 import{Link}from'react-router-dom'
 import Navbar from './Navbar'
 import Thumbnailpics from '../UploadImg/Thumbnailpics'
@@ -45,6 +44,7 @@ const Component = styled.div`
   font-size: 17px;
   max-width: 618px;
   margin-right: 100px;
+  padding-left: 20px;
   
 }
 .recipe-name{
@@ -57,24 +57,7 @@ const Component = styled.div`
   display: flex;
   flex-direction: row;
 }
-.recipe-ctn-1{
-  width: auto;
-  height: 47px;
-  border: 1px solid #E1E6EE;
-  border-radius: 10px; 
-  margin-top: 10px;
-  margin-right: 36px;
 
-
-}
-.recipe-ctn-2{
-  width: 140px;
-  height: 47px;
-  border: 1px solid #E1E6EE;
-  border-radius: 10px; 
-  margin-top: 10px;
-
-}
 
 .images{
   margin-top: 28px;
@@ -127,9 +110,7 @@ export default function Publish  (props: IAppProps ){
 // return <Publish name={prop.nextClick} />;
 //  {
   
-   const nextClick = () => {
-       alert ('changing message')
-  }
+
 
   return (
     <Component>

@@ -1,12 +1,9 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { Icon } from '../../assets/icons/index'
-import Navbar from '../Sharedcomponents/Navbar'
-import Publish from '../Sharedcomponents/Publish'
-import {useState} from 'react';
 import {BrowserRouter as Router ,Routes , Route, } from'react-router-dom';
-import Ingredients from '../Sharedcomponents/Ingredients'
-import Steps from '../Sharedcomponents/Steps'
+import Publish from '../Sharedcomponents/Publish';
+import Ingredients from '../Sharedcomponents/Ingredients';
+import Steps from '../Sharedcomponents/Steps';
 
 
 
@@ -104,8 +101,7 @@ hr {
 
 
 export interface IAppProps {
-  
- 
+
 }
 const Home = () =>( 
   <>
@@ -120,14 +116,11 @@ export default function Dashboard (props: IAppProps ) {
     
     <Component>
        <Router>
-          
-          
           <Routes>
           <Route path='/' element={<Home/>}/>
         <Route path='/publish' element={<Publish/>}/>
-        <Route path='/ingredient' element={<Ingredients />}/>
+        <Route path='/ingredient' element={<Ingredients/>}/>
         <Route path='/steps' element={<Steps/>}/>
-
     </Routes>
     </Router>
     
