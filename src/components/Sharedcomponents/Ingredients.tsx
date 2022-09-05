@@ -174,7 +174,7 @@ export default function Ingredients (props: IAppProps) {
           <hr/>
               <div className='btn-btm'>
                 
-              <Link to="/publish">
+              <Link to="/">
               <button className='cancel-btn'>Back</button>
               </Link>
               <Link to="/steps">

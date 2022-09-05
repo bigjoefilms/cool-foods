@@ -117,8 +117,8 @@ export default function Dashboard (props: IAppProps ) {
     <Component>
        <Router>
           <Routes>
-          <Route path='/' element={<Home/>}/>
-        <Route path='/publish' element={<Publish/>}/>
+          
+        <Route path='/' element={<Publish/>}/>
         <Route path='/ingredient' element={<Ingredients/>}/>
         <Route path='/steps' element={<Steps/>}/>
     </Routes>
